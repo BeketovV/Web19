@@ -10,14 +10,12 @@
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et neque sapien. Nullam sit amet sollicitudin diam, et commodo elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam pellentesque convallis ipsum, id pharetra libero interdum sed. Nunc a mauris egestas libero feugiat bibendum. Ut volutpat sollicitudin enim, nec fermentum justo. Fusce diam orci, ultricies sed pellentesque ut, pharetra ac turpis. Donec at erat viverra, vehicula ipsum sodales, finibus nunc. Nunc eu dolor nec ligula luctus lacinia sit amet et ipsum. Morbi consectetur erat vel lacus tincidunt euismod. Pellentesque interdum volutpat libero, tincidunt sollicitudin sapien sollicitudin gravida. Integer scelerisque eros purus. Sed et lacus gravida, pulvinar libero eget, interdum nisi. Nunc in molestie nulla. Proin pellentesque diam ut tortor laoreet, sit amet egestas orci tempor.</p>
 </div>
 	<h1><a href="">Second Title</a></h1>
-<div>
-<p>Integer vitae velit nisi. Aliquam mattis rhoncus mauris a placerat. Praesent orci elit, semper et est non, ultrices consequat leo. Praesent sollicitudin risus orci, vel interdum turpis iaculis eu. Nullam justo enim, vestibulum sit amet pellentesque nec, faucibus vitae nulla. Sed finibus condimentum metus nec luctus. Suspendisse rhoncus viverra auctor. Curabitur nec mi a nunc tincidunt cursus. Nam quis ullamcorper ipsum, at vehicula tortor. Fusce ac urna eu massa elementum tristique et sed lectus. Donec ultricies rhoncus mi vel dignissim. Proin nec tortor id magna blandit porta.</p>
-</div>
-	<h1><a href="">Third Title</a></h1>
-<div>
-<p>Mauris at velit orci. Pellentesque ut dui leo. Donec quis ante ullamcorper, aliquet magna euismod, auctor nibh. Vestibulum quam dui, volutpat quis nisl eu, rutrum commodo tortor. Donec hendrerit nec est a lobortis. Vestibulum quis urna egestas, cursus diam in, fermentum nisi. Cras commodo felis dolor, et suscipit enim viverra et. Vestibulum rutrum suscipit tristique. Sed malesuada mollis ipsum eu tristique. Aenean vitae diam quis turpis interdum rhoncus. Maecenas nec consectetur turpis. Nam at lacinia ligula. Aliquam dolor nunc, tristique ac hendrerit eu, fermentum at massa.</p>
-</div>
-
-
+{% for post in posts %}
+	<div>
+		<p>published: {{ post.published_date}}</p>
+		<h1><a href="">{{post.title}}</a></h1>
+		<p>{{post.text|linebreaksbr}}</p>
+	</div>
+{% endfor %}
 </body>
 </html>
